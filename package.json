@@ -1,9 +1,10 @@
 {
-  "name": "react-custom-double-scrollbar",
+  "name": "react-shadowed-double-scrollbar",
   "version": "1.0.0",
-  "description": "A simple library for adding scrollbars on both sides of content with some customizable options.",
-  "main": "index.js",
+  "description": "A simple library for adding scrollbars on both top and bottom of content with customizable shadows.",
+  "main": "DoubleScrollbar.js",
   "dependencies": {
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },

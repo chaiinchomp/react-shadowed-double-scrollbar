@@ -7,6 +7,26 @@ export default {
   component: DoubleScrollbar,
   argTypes: {
     backgroundColor: { control: 'color' },
+    shadowVariant: {
+      control: {
+        type: 'select',
+        options: [
+          'dark',
+          'light',
+          'off'
+        ],
+      },
+    },
+    children:{
+      table:{
+        disable:true
+      }
+    },
+    textColor:{
+      table:{
+        disable:true
+      }
+    }
   },
 };
 
@@ -20,21 +40,32 @@ const Template = ({shadowVariant, textColor, backgroundColor}) => (
     </div>
 );
 
-export const HorizontalDoubleScrollbarDefault = Template.bind({});
-HorizontalDoubleScrollbarDefault.args = {
+export const DefaultConfiguration = Template.bind({});
+DefaultConfiguration.args = {
   textColor: '#000'
 };
 
-export const HorizontalDoubleScrollbarLight = Template.bind({});
-HorizontalDoubleScrollbarLight.args = {
+export const DarkShadows = Template.bind({});
+DarkShadows.args = {
   shadowVariant:'dark',
   textColor: '#000',
-  backgroundColor: '#fff'
 };
 
-export const HorizontalDoubleScrollbarDark = Template.bind({});
-HorizontalDoubleScrollbarDark.args = {
+export const LightShadows = Template.bind({});
+LightShadows.args = {
   shadowVariant: 'light',
   textColor: '#fff',
-  backgroundColor: '#222'
+};
+
+export const NoShadows = Template.bind({});
+NoShadows.args = {
+  shadowVariant: 'off',
+  textColor: '#000'
+};
+
+export const CustomBackgroundColor = Template.bind({});
+CustomBackgroundColor.args = {
+  shadowVariant: 'dark',
+  backgroundColor: '#f76464',
+  textColor: '#000'
 };

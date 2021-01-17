@@ -1,5 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
+import PropTypes from 'prop-types';
 import { getDefaultBackgroundColor, getShadowStyle } from './shadows';
+
+DoubleScrollbar.propTypes = {
+    /** Child component(s) to be wrapped in the double scrollbars. */
+    children: PropTypes.node.isRequired,
+    /** Custom background color. Optional. If not provided, a contrasting background color will be selected based on the value of shadowVariant. */
+    backgroundColor: PropTypes.string,
+    /** Type of shadow to display on the edge of the scrollable content. Valid options: off, light, or dark (default). */
+    shadowVariant: PropTypes.string,
+};
 
 export default function DoubleScrollbar({ children, backgroundColor, shadowVariant = 'dark' }) {
     const [width, setWidth] = useState('auto');
@@ -35,7 +45,7 @@ export default function DoubleScrollbar({ children, backgroundColor, shadowVaria
     return (
         <div>
             <div ref={outerDiv} style={{ overflowX: 'auto', overflowY: 'hidden', background }}>
-                <div ref={innerDiv} style={{ paddingTop: '1px', width }} />
+                <div ref={innerDiv} style={{ paddingTop: '0.1px', width }} />
             </div>
             <div ref={childWrapper} style={{ overflow: 'auto', overflowY: 'hidden', background, ...getShadowStyle(background, shadowVariant) }}>
                 {children}
