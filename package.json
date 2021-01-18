@@ -1,8 +1,13 @@
 {
   "name": "react-shadowed-double-scrollbar",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A simple library for adding scrollbars on both top and bottom of content with customizable shadows.",
-  "main": "DoubleScrollbar.js",
+  "main": "index.js",
+  "homepage": "https://github.com/chaiinchomp/react-shadowed-double-scrollbar",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chaiinchomp/react-shadowed-double-scrollbar.git"
+  },
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -26,9 +31,14 @@
     "@storybook/addon-essentials": "^6.1.14",
     "@storybook/addon-links": "^6.1.14",
     "@storybook/react": "^6.1.14",
-    "babel-loader": "^8.2.2"
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "webpack": "^5.15.0",
+    "webpack-cli": "^4.3.1",
+    "webpack-node-externals": "^2.5.2"
   },
   "scripts": {
+    "build": "webpack --mode production",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   }
