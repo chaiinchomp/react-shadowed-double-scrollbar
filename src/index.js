@@ -16,10 +16,11 @@ export default function DoubleScrollbar({ children, backgroundColor, shadowVaria
     const innerDiv = useRef();
     const outerDiv = useRef();
     const childWrapper = useRef();
-    const background = backgroundColor ? backgroundColor : getDefaultBackgroundColor(shadowVariant);
+    const background = backgroundColor || getDefaultBackgroundColor(shadowVariant);
 
     const calculateWidth = () => {
-        const newWidth = (childWrapper.current && childWrapper.current.scrollWidth) ? `${childWrapper.current.scrollWidth}px` : 'auto';
+        const newWidth =
+            childWrapper.current && childWrapper.current.scrollWidth ? `${childWrapper.current.scrollWidth}px` : 'auto';
         if (newWidth !== width) {
             setWidth(newWidth);
         }
@@ -47,7 +48,15 @@ export default function DoubleScrollbar({ children, backgroundColor, shadowVaria
             <div ref={outerDiv} style={{ overflowX: 'auto', overflowY: 'hidden', background }}>
                 <div ref={innerDiv} style={{ paddingTop: '0.1px', width }} />
             </div>
-            <div ref={childWrapper} style={{ overflow: 'auto', overflowY: 'hidden', background, ...getShadowStyle(background, shadowVariant) }}>
+            <div
+                ref={childWrapper}
+                style={{
+                    overflow: 'auto',
+                    overflowY: 'hidden',
+                    background,
+                    ...getShadowStyle(background, shadowVariant),
+                }}
+            >
                 {children}
             </div>
         </div>

@@ -1,9 +1,9 @@
 export function getDefaultBackgroundColor(shadowVariant) {
     switch (shadowVariant) {
         case 'light':
-            return '#111'
+            return '#111';
         case 'dark':
-            return '#fff'
+            return '#fff';
         default:
             return null;
     }
@@ -23,9 +23,10 @@ export function getShadowStyle(backgroundColor, shadowVariant) {
         backgroundRepeat: 'no-repeat',
         backgroundSize: '20px 100%, 20px 100%, 10px 100%, 10px 100%',
         backgroundAttachment: 'local, local, scroll, scroll',
-        backgroundImage: `linear-gradient(to right, ${backgroundColor}, ${backgroundColor}),`
-                       + `linear-gradient(to right, ${backgroundColor}, ${backgroundColor}),`
-                       + `linear-gradient(to right, rgba(${fromColor}, 0.25), rgba(${toColor}, 0)),`
-                       + `linear-gradient(to left, rgba(${fromColor}, 0.25), rgba(${toColor}, 0))`
-    }
+        backgroundImage:
+            `linear-gradient(to right, ${backgroundColor}, ${backgroundColor}),` +
+            `linear-gradient(to right, ${backgroundColor}, ${backgroundColor}),` +
+            `linear-gradient(to right, rgba(${fromColor}, 0.25), rgba(${toColor}, 0)),` +
+            `linear-gradient(to left, rgba(${fromColor}, 0.25), rgba(${toColor}, 0))`,
+    };
 }
