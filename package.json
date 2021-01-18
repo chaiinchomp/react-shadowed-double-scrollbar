@@ -1,6 +1,6 @@
 {
     "name": "react-shadowed-double-scrollbar",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "A simple library for adding scrollbars on both top and bottom of content with customizable shadows.",
     "author": "chaiinchomp",
     "license": "MIT",
