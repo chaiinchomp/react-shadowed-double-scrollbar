@@ -6,6 +6,8 @@ Standalone fork of [umchee/react-double-scrollbar](https://github.com/umchee/rea
 
 **[Storybook demo](https://chaiinchomp.github.io/react-shadowed-double-scrollbar)**
 
+**[NPM package](https://www.npmjs.com/package/react-shadowed-double-scrollbar)**
+
 # Usage
 
 ## Setup
