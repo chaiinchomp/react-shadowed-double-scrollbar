@@ -18,7 +18,7 @@ npm install react-shadowed-double-scrollbars
 
 | Property | Type | Required? | Description | Valid values | Default value |
 | -------- | ---- | --------- | ----------- | ------------ | ------------- |
-| `backgroundColor` | String | No | Custom background color of scrollbox | Any valid css color string (color name or hex code) | Depends on value of `shadowVariant`:<br>`off`: no background<br>`light`: dark background (`#ffffff`)<br>`dark`: light background (`#111111`) |
+| `backgroundColor` | String | No | Custom background color of scrollbox | Any valid css color string (color name or hex code) | Depends on value of `shadowVariant`: <ul><li>`off`: no background</li><li>`light`: dark background (`#111111`)</li><li>`dark`: light background (`#ffffff`)</li></ul> |
 | `shadowVariant` | String | No | Type of shadow to display on the edge of the scrollable content. | `light`, `dark`, or `off` | `dark` |
 
 ## Examples
