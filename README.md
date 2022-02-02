@@ -13,7 +13,7 @@ Standalone fork of [umchee/react-double-scrollbar](https://github.com/umchee/rea
 ## Setup
 
 ```
-npm install react-shadowed-double-scrollbars
+npm install react-shadowed-double-scrollbar
 ```
 
 ## Properties
